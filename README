@@ -1,0 +1,44 @@
+simpleddns
+
+www.jimmykiselak.com/simpleddns
+
+----
+
+INTRODUCTION
+
+www.jimmykiselak.com/simpleddns/about/
+
+simpleddns is a Ruby ddns client script specifically for dyndns.org.
+
+CONFIGURATION
+
+www.jimmykiselak.com/simpleddns/src/
+
+simpleddns requires the use of a YAML configuration file, included as conf.yml
+
+It also requires a file to temporarily store the current IP address and optionally can write to a log file.
+
+The IP file should contain only the IP address in dotted format (xxx.xxx.xxx.xxx) and the script should have read and write access to this file
+
+The log file will record whether or not the address has changed since the last run and if it has changed it will record whether or not the update was successful. The script should have write access to the log file.
+
+USE
+
+www.jimmykiselak.com/simpleddns/src/
+
+It is suggested that the script be run by a cron job. To run the script, go to the directory with the script and type `simpleddns`. If your YAML configuration file is not in the same directory or is not called conf.yml, then run it as `simpleddns -c /path/to/config_file.yml`
+
+----
+Copyright (c) 2011, James Kiselak
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    * Neither the name of James Kiselak nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+            THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
