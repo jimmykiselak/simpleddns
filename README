@@ -28,7 +28,7 @@ USE
 
 www.jimmykiselak.com/simpleddns/src/
 
-It is suggested that the script be run by a cron job. To run the script manually, go to the directory with the script and type `simpleddns`. If your YAML configuration file is not in /etc/ or is not called simpleddns.yml, then run it as `simpleddns -c /path/to/simpleddns.yml`. If you are running a cron job, you can either put simpleddns.yml in /etc/ or you can pass the cron job the arguments above.
+It is suggested that the script be run by a cron job. To run the script manually, go to the directory with the script and type `simpleddns`. If your YAML configuration file is not in /etc/ or is not called simpleddns.yml, then run it as `simpleddns -c /path/to/simpleddns.yml`. If you are running a cron job, you can either put simpleddns.yml in /etc/ or you can pass the cron job the arguments above. Be sure Ruby is included on your crontab path :)
 
 ----
 Copyright (c) 2011, James Kiselak
