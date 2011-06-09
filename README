@@ -16,7 +16,7 @@ www.jimmykiselak.com/simpleddns/src/
 
 In order to run the script, ruby must be installed and on the user's path. If it is not on the path, then you must edit the first line of the file simpleddns to point to the ruby executable, e.g. '#!/path/to/ruby' 
 
-simpleddns requires the use of a YAML configuration file, included as conf.yml
+simpleddns requires the use of a YAML configuration file, included as simpleddns.yml, which should be placed in /etc/
 
 It also requires a file to temporarily store the current IP address and optionally can write to a log file.
 
@@ -28,7 +28,7 @@ USE
 
 www.jimmykiselak.com/simpleddns/src/
 
-It is suggested that the script be run by a cron job. To run the script, go to the directory with the script and type `simpleddns`. If your YAML configuration file is not in the same directory or is not called conf.yml, then run it as `simpleddns -c /path/to/config_file.yml`
+It is suggested that the script be run by a cron job. To run the script manually, go to the directory with the script and type `simpleddns`. If your YAML configuration file is not in /etc/ or is not called simpleddns.yml, then run it as `simpleddns -c /path/to/simpleddns.yml`. If you are running a cron job, you can either put simpleddns.yml in /etc/ or you can pass the cron job the arguments above.
 
 ----
 Copyright (c) 2011, James Kiselak

@@ -29,7 +29,7 @@ def update_ip(ip, url, membersite, username, password)
 end
 
 options = {
-    :config_file => './conf.yml'
+    :config_file => '/etc/simpleddns.yml'
 }
 
 parser = OptionParser.new do |opts|
