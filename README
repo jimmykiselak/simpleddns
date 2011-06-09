@@ -14,11 +14,13 @@ CONFIGURATION
 
 www.jimmykiselak.com/simpleddns/src/
 
+In order to run the script, ruby must be installed and on the user's path. If it is not on the path, then you must edit the first line of the file simpleddns to point to the ruby executable, e.g. '#!/path/to/ruby' 
+
 simpleddns requires the use of a YAML configuration file, included as conf.yml
 
 It also requires a file to temporarily store the current IP address and optionally can write to a log file.
 
-The IP file should contain only the IP address in dotted format (xxx.xxx.xxx.xxx) and the script should have read and write access to this file
+The IP file should contain only the IP address in dotted format (xxx.xxx.xxx.xxx) and the script should have read and write access to this file. This file must exist and be manually populated before running the script.
 
 The log file will record whether or not the address has changed since the last run and if it has changed it will record whether or not the update was successful. The script should have write access to the log file.
 
