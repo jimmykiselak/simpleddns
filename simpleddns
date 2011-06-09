@@ -21,6 +21,7 @@ def update_ip(ip, url, membersite, username, password)
     Net::HTTP.start(url) {|http|
         req = Net::HTTP::Get.new("/nic/update?hostname=#{membersite}&myip=#{ip}&wildcard=NOCHG&mx=NOCHG&backmx=NOCHG")
         req.basic_auth username, password
+        req.add_field 'User-Agent', 'simpleddns'
         response = http.request(req)
         result = response.body
     }
@@ -65,7 +66,7 @@ if !old_ip.eql?(ip)
         ip_file = File.new(conf['ip_file'], "w")
         ip_file.write(ip)
     else
-        log_message = "Bad update. IP not changed\n"
+        log_message = "Bad update. IP not changed - #{result}\n"
     end
 else
     log_message = "No change - #{Time.now}\n"
